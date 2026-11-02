@@ -1,0 +1,49 @@
+{
+  "name": "personal-portfolio-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Custom personal portfolio website with dedicated frontend, backend, and shared contract packages",
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build --workspace=shared",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:shared": "npm run lint --workspace=shared",
+    "lint:backend": "npm run lint --workspace=backend",
+    "lint:frontend": "npm run lint --workspace=frontend",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "typecheck:shared": "npm run typecheck --workspace=shared",
+    "typecheck:backend": "npm run typecheck --workspace=backend",
+    "typecheck:frontend": "npm run typecheck --workspace=frontend",
+    "test": "npm run test --workspaces --if-present",
+    "test:backend": "npm run test --workspace=backend",
+    "test:frontend": "npm run test --workspace=frontend",
+    "dev": "npm run dev --workspace=backend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "start": "npm run start --workspace=backend",
+    "start:backend": "npm run start --workspace=backend",
+    "migrate": "npm run migrate --workspace=backend",
+    "seed": "npm run seed --workspace=backend",
+    "coordination:verify": "node scripts/verify_fullstack_coordination.mjs",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-branding",
+    "fullstack",
+    "typescript",
+    "express",
+    "postgresql",
+    "nextjs"
+  ],
+  "author": "Alex Rivera",
+  "license": "MIT"
+}
